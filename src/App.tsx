@@ -1,8 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import "./App.css";
 import { selectUI } from "./AppSlice";
 import alien from "./assets/alien.svg";
+import "./App.css";
 
 const App: React.FC = () => {
   return (
