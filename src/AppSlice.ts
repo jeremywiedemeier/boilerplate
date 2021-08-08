@@ -11,7 +11,9 @@ interface AppState {
 
 const initialState: AppState = {
   UI: {
-    darkTheme: false,
+    darkTheme:
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches,
   },
 };
 
