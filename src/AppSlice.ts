@@ -11,9 +11,9 @@ interface AppState {
 
 const initialState: AppState = {
   UI: {
-    darkTheme: false,
-    // window.matchMedia &&
-    // window.matchMedia("(prefers-color-scheme: dark)").matches,
+    darkTheme:
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches,
   },
 };
 
@@ -21,8 +21,11 @@ export const AppSlice = createSlice({
   name: "app",
   initialState,
   reducers: {
-    toggleTheme: (state: AppState) => {
-      state.UI.darkTheme = !state.UI.darkTheme;
+    toggleTheme: (
+      state: AppState,
+      action: PayloadAction<AppState["UI"]["darkTheme"]>
+    ) => {
+      state.UI.darkTheme = action.payload;
     },
   },
 });
