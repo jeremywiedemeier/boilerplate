@@ -8,7 +8,7 @@ RUN npm ci
 
 COPY . .
 
-EXPOSE 3011
+EXPOSE 3010
 
 ENV NODE_ENV=production
 
