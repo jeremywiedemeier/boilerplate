@@ -1,6 +1,6 @@
 :root {
-  --purple: #222439;
-  --white: #f7ebec;
+  --background: #fff;
+  --text: #222;
 }
 
 *, *::before, *::after {
@@ -13,8 +13,8 @@
 
 body, html, #root {
   height: 100%;
-  background-color: var(--purple);
-  color: var(--white);
+  background-color: var(--background);
+  color: var(--text);
   overflow-x: hidden;
   transition: background-color 0.2s;
 }

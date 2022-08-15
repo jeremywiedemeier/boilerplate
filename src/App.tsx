@@ -1,7 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { selectUI } from "./AppSlice";
-import alien from "./assets/alien.svg";
 
 import "./App.css";
 
@@ -11,8 +10,6 @@ const App: React.FC = () => {
       {useSelector(selectUI).darkTheme ? (
         <link rel="stylesheet" type="text/css" href="./darkThemeStyles.css" />
       ) : null}
-      <img alt="alien" src={alien} />
-      <h1>Ayy lmao</h1>
     </div>
   );
 };
