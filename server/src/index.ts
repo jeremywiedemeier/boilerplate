@@ -1,5 +1,5 @@
 import express from "express";
-import { PORT } from "./resources";
+import { PORT, log } from "./resources";
 
 const app = express();
 
@@ -8,5 +8,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(PORT, () => {
-  console.log(`Server started on port ${PORT}`);
+  log(`Server started on port ${PORT}`);
 });
