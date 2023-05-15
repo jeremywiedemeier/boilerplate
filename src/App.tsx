@@ -10,7 +10,6 @@ const App: React.FC = () => {
       {useSelector(selectUI).darkTheme ? (
         <link rel="stylesheet" type="text/css" href="./darkThemeStyles.css" />
       ) : null}
-      <h1>Ayy lmao</h1>
     </div>
   );
 };
