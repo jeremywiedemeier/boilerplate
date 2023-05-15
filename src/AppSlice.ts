@@ -1,7 +1,6 @@
 /* eslint-disable no-param-reassign */
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-// eslint-disable-next-line import/no-cycle
-import { RootState } from "./store";
+import { type PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 
 interface AppState {
   UI: {
@@ -29,9 +28,14 @@ export const AppSlice = createSlice({
     },
   },
 });
-
 export const { toggleTheme } = AppSlice.actions;
 
-export const selectUI = (state: RootState): AppState["UI"] => state.app.UI;
+export const store = configureStore({
+  reducer: {
+    app: AppSlice.reducer,
+  },
+});
 
-export default AppSlice.reducer;
+type RootState = ReturnType<typeof store.getState>;
+
+export const selectUI = (state: RootState): AppState["UI"] => state.app.UI;

@@ -5,9 +5,8 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:jest/recommended',
     'prettier',
-    'prettier/react',
-    'prettier/@typescript-eslint',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    'plugin:import/recommended'
   ],
   plugins: ['react', '@typescript-eslint', 'jest'],
   env: {
