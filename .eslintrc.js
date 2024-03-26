@@ -3,17 +3,14 @@ module.exports = {
     'airbnb-typescript',
     'airbnb/hooks',
     'plugin:@typescript-eslint/recommended',
-    'plugin:jest/recommended',
     'prettier',
-    'prettier/react',
-    'prettier/@typescript-eslint',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    'plugin:import/recommended'
   ],
-  plugins: ['react', '@typescript-eslint', 'jest'],
+  plugins: ['react', '@typescript-eslint'],
   env: {
     browser: true,
     es6: true,
-    jest: true,
   },
   globals: {
     Atomics: 'readonly',
@@ -33,6 +30,9 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'react-hooks/exhaustive-deps': 'warn',
     'no-param-reassign': 'warn',
+    '@typescript-eslint/no-unused-vars': 'warn',
+    '@typescript-eslint/no-explicit-any': 'warn',
+    'prefer-const': 'off',
     'prettier/prettier': [
       'error',
       {
